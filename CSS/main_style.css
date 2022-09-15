@@ -11,14 +11,16 @@ body {
   text-align: center;
 }
 h1 {
-  color: #2c7bb6;
-}
+  color: #f7f7f7;
+  padding: 5px;
+  margin: 0;
+} /*Changed color of h1
 #body-container{
 
 }
 #header {
   background-color: #0571b0;
-} /*changed background color of all headers to blue*/
+} /*changed background color of elements with ID= header to blue*/
 #profile-picture {
 
 }
