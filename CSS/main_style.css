@@ -46,6 +46,9 @@ to all four sides of the welcome text; set font size of welcome text to 25px*/
  padding-top: 25px;
 font-size: 25px;
 }
+/*fixed the research interests div by 1.aligning all the text to the left side
+2. positioning the div 50px left of its relative position 3.changed the font
+size to 25px for better readability */
 #research-interests {
 text-align: left;
 font-size: 25px;
