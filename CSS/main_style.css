@@ -14,10 +14,21 @@ h1 {
   color: #f7f7f7;
   padding: 5px;
   margin: 0;
-} /*Changed color of h1
+} /*Changed color of h1 text to off white and added 5 pixels of padding*/
 #body-container{
-
+background-color: #f7f7f7;
+max-width: #1000px;
+margin:auto;
+height:100vh;
+border: 2px solid #f7f7f7;
+border-radius: 25px;
+overflow:hidden;
 }
+/*formatted the body container by changing background color to offwhite; set
+the width = to 1000px; set the margin automatically horizontally center elements
+with bodycontainer; set height of container to 100 viewport height; set border
+to color offwhite at 2px weight; used border radius to round borders; set
+overflow to hidden which clips what is out of bounds*/
 #header {
   background-color: #0571b0;
 } /*changed background color of elements with ID= header to blue*/
