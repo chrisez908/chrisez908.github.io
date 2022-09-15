@@ -47,5 +47,8 @@ to all four sides of the welcome text; set font size of welcome text to 25px*/
 font-size: 25px;
 }
 #research-interests {
-
+text-align: left;
+font-size: 25px;
+position: relative;
+left: 50px;
 }
