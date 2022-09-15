@@ -37,6 +37,8 @@ overflow:hidden;
 #header {
   background-color: #0571b0;
 }
+/*set profile-picture to left side of screen using float; added 25px of padding
+to all four sides of the welcome text; set font size of welcome text to 25px*/
 #profile-picture {
  float:left;
 }
