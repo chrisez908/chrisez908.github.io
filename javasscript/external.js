@@ -9,8 +9,10 @@ const y = "mapping";
 const out = x+y
 document.write(out);*/
 //A prompt box is used to prompt users to input a value before entering a page.
-user_name= window.prompt("Please enter your name", "Type your name here");
+
+/*user_name= window.prompt("Please enter your name", "Type your name here");
 document.write(user_name);
+
 /*const y = 33;
 document.writeln(x+y);
 document.writeln("<br>");
@@ -35,3 +37,14 @@ document.writeln("You chose Cancel!");
 {
   document.writeln(arr[i],"<br>");
 }*/
+function welcome()
+{
+  let a = "Please enter your name.";
+  let b = "Type your name here.";
+  // A prompt box is used to prompt users to input a value before entering a page.
+  user_name=window.prompt(a,b);
+  message="<h1>Hello, welcome to my webpage, "+ user_name+ "!</h1>"
+  return message
+}
+document.write(welcome());
+document.write(message);
