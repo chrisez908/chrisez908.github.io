@@ -10,7 +10,7 @@ blue*/
 body {
   background-color: #92c5de;
   color: #0571b0;
-  text-align: center
+  text-align: center;
   margin: 0;
 }
  /*Changed color of h1 text to off white and added 5 pixels of padding*/
@@ -26,9 +26,9 @@ to color offwhite at 2px weight; used border radius to round borders; set
 overflow to hidden which clips what is out of bounds*/
 #body-container{
 background-color: #f7f7f7;
-max-width: #1000px;
+max-width: #750px;
 margin:auto;
-height:100vh;
+height:180vh;
 border: 2px solid #f7f7f7;
 border-radius: 25px;
 overflow:hidden;

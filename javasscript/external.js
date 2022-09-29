@@ -1,49 +1,11 @@
-//(Tips: No <script> tag)
-//document.write("Where is my JS code?")
-//window.alert(5+6)
-//window.alert('5+6')
-//document.write('<h1>user_name</h1>');
-//document.write('<p>A sentence.</p>')
-/*const x="web";
-const y = "mapping";
-const out = x+y
-document.write(out);*/
-//A prompt box is used to prompt users to input a value before entering a page.
 
-/*user_name= window.prompt("Please enter your name", "Type your name here");
-document.write(user_name);
-
-/*const y = 33;
-document.writeln(x+y);
-document.writeln("<br>");
-document.writeln(x+=y);
-document.writeln("<br>");
-document.writeln(x+=y);*/
-/*document.writeln("<button onclick='condition()'>Conditional Test</button>")
-function condition()
-{
-  x=confirm("Are you sure you want to proceed?");
-  if(x)
-{
-  document.writeln("You chose Okay!");
-}
-else
-{
-document.writeln("You chose Cancel!");
-}
-
-}*/
-/*for(var i=0; i < arr.length; i++)
-{
-  document.writeln(arr[i],"<br>");
-}*/
 var webmaps =
 [
   ["oil spill toolkit",
 
 "https://www.glo.texas.gov",
 
-"The oil spill toolkit developed by enterprise technology solutions is neat"
+"The oil spill toolkit developed by enterprise technology solutions is neat Ten Million wins accounted for but not one in the name of the lord who gave his bread down to us from space to eat within a year of the passin of the lamb and the going of the maiden for when were not who we ought to be but who we had to be in a world that chose to treat us so and deliver a heap of scum"
 ],
   ["Texas Ecosystems Analytical Mapper",
 
