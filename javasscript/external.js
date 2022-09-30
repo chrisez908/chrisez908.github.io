@@ -5,7 +5,7 @@ var webmaps =
 
 "https://www.glo.texas.gov",
 
-"The oil spill toolkit developed by enterprise technology solutions is neat Ten Million wins accounted for but not one in the name of the lord who gave his bread down to us from space to eat within a year of the passin of the lamb and the going of the maiden for when were not who we ought to be but who we had to be in a world that chose to treat us so and deliver a heap of scum"
+"The oil spill toolkit developed by enterprise technology solutions is neat"
 ],
   ["Texas Ecosystems Analytical Mapper",
 
@@ -31,9 +31,15 @@ function webmap_table()
   for (var row=0; row < webmaps.length; row++)
   {
   document.write("<tr>");
-  for (var column=0; column < webmaps[0].length; column++)
-   {
-  document.write("<td>"+webmaps[row][column]+"</td>");
+  for (var column=0; column < webmaps[0].length; column++){
+    if (column === 2)
+    {
+      document.write("</tr><tr>");
+      document.write("<td colspan=2>" + webmaps[row][column]+"</td>")
+
+    } else {
+      document.write("<td>"+ webmaps[row][column] + "</td>");
+    }
    }
   document.write("</tr>");
   }
