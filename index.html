@@ -68,7 +68,8 @@
       <h3>My First Webmap</h3>
         <div id = "mapid" style="width: 600px; height: 400px; margin: auto;">
           <script>
-            var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+            //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+            var mymap = L.map('mapid');
             L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token = {accessToken}',
             {
               maxZoom: 18,
@@ -112,6 +113,21 @@
               {
                 mymap.setView(e.latlng, 13);
               })
+              var ZoomViewer = L.Control.extend({onAdd: function()
+                {
+                  var gauge = L.DomUtil.create('div');
+                  gauge.style.width = '200px';
+                  gauge.style.background = 'rgba(255,255,255,0.5)';
+                  gauge.style.textAlign = 'left';
+                  mymap.on('zoomstart zoom zoomend', function(ev)
+                  {
+                  gauge.innerHTML = 'Zoom level: ' + mymap.getZoom();
+                })
+                return gauge;
+              }
+            });
+            (new ZoomViewer).addTo(mymap);
+            mymap.setView([0,0], 1);
           </script>
         </div>
 </body>
