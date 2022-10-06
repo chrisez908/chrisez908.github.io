@@ -1,24 +1,49 @@
- <doctype html>
-<html>
+<doctype html>
+ <html>
   <head>
+
+    <link rel ="stylesheet" type="text/css"
+      href="css/map_styles.css">
+
+    <meta charset="utf-8"/>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+
+
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
+
+    <link href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css' rel='stylesheet' />
+
+    <link rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+      integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+      crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+    crossorigin="">
+    </script>
+
+      <script src="javasscript/external.js"></script>
+
+    <script src="javasscript/secret_keys.js"></script>
+
     <title>Christopher Zuniga </title>
     <!-- ALL styling for this HTML document are conatined in this external css
      file -->
     <link rel="stylesheet" type="text/css" href="css/main_style.css">
-    <script src="javasscript/external.js"></script>
+
   </head>
   <body>
     <div id="body-container">
       <div id="header">
-      <h1>Hello Welcome
+       <h1>
         <script>
           document.write(welcome())
         </script>
-      </h1>
-    </div>
-    <div id="profile-picture">
-      <img src=images/profile-picture.jpg width=250px height=300px/>
-    </div>
+       </h1>
+      </div>
+      <div id="profile-picture">
+       <img src=images/profile-picture.jpg width=250px height=300px/>
+      </div>
     <div id="welcome-text">
       My name is Christopher Zuniga <br>
       Welcome to my webpage. <br>
@@ -36,11 +61,59 @@
     </div>
     <div id= "webmap-reviews">
       <h3>Webmap Reviews</h3>
-      <script>
+      <!-- <script>
         document.write(webmap_table())
-      </script>
+      </script> -->
     </div>
-  </div>
+      <h3>My First Webmap</h3>
+        <div id = "mapid" style="width: 600px; height: 400px; margin: auto;">
+          <script>
+            var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token = {accessToken}',
+            {
+              maxZoom: 18,
+              id:'mapbox/mapbox-traffic-v1',
+              accessToken:'pk.eyJ1IjoiY2V6MTYiLCJhIjoiY2w4eGNtdWFkMDVldDNvcGNuOTk0a3ZjeiJ9.u4DpCO8MWNsOWtt35ZCCzw'
+
+            }).addTo(mymap);
+
+            // L.tileLayer(
+            // 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            // id: 'mapbox/dark-v10',
+            // accessToken: mapbox_access_token,
+            // }).addTo(mymap);
+
+               var marker = L.marker([51.5, -0.09]).addTo(mymap);
+                 marker.bindPopup("<b>Hello world!</b><br>I am a pop-up.").openPopup();
+                 marker.on('click', function(e)
+                 {
+                   mymap.setView(e.latlng, 14);
+                 })
+               var circle = L.circle([51.508, -0.11],
+                 {
+                   color: 'red',
+                  fillColor: '#f03',
+                  FillOpacity: 0.5,
+                  radius: 500
+                })
+                .addTo(mymap);
+                circle.bindPopup("I am a circle.");
+                circle.on('click', function(e)
+                {
+                  mymap.setView(e.latlng, 13);
+                })
+                var polygon = L.polygon([
+                [51.509, -0.08],
+                [51.503, -0.06],
+                [51.51, -0.047]
+                ]).addTo(mymap);
+              polygon.bindPopup("I am a polygon.");
+              polygon.on('click', function(e)
+              {
+                mymap.setView(e.latlng, 13);
+              })
+          </script>
+        </div>
 </body>
 <div id="copyright">
  <script>
@@ -54,5 +127,6 @@
    current year next to it.*/
   document.writeln("Copyright&copy;"+ year)
  </script>
-</div>
+ </div>
+
 </html>
