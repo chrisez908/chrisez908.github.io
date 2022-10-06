@@ -1,13 +1,29 @@
 <doctype html>
  <html>
   <head>
-
-    <link rel ="stylesheet" type="text/css"
-      href="css/map_styles.css">
-
     <meta charset="utf-8"/>
     <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+      <script src="javasscript/external.js"></script>
 
+    <script src="javasscript/secret_keys.js"></script>
+
+    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+    crossorigin="">
+    </script>
+
+    <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'>
+    </script>
+
+    <title>Christopher Zuniga </title>
+    <!-- ALL styling for this HTML document are conatined in this external css
+     file -->
+     <link rel ="stylesheet" type="text/css"
+       href="css/map_styles.css">
+    <link rel="stylesheet" type="text/css" href="css/main_style.css">
+    <link
+    href='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.css'
+    rel='stylesheet' />
 
     <script src='https://api.mapbox.com/mapbox.js/v3.3.1/mapbox.js'></script>
 
@@ -17,19 +33,6 @@
       href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
       integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
       crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
-    integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
-    crossorigin="">
-    </script>
-
-      <script src="javasscript/external.js"></script>
-
-    <script src="javasscript/secret_keys.js"></script>
-
-    <title>Christopher Zuniga </title>
-    <!-- ALL styling for this HTML document are conatined in this external css
-     file -->
-    <link rel="stylesheet" type="text/css" href="css/main_style.css">
 
   </head>
   <body>
@@ -70,19 +73,19 @@
           <script>
             //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
             var mymap = L.map('mapid');
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token = {accessToken}',
-            {
-              maxZoom: 18,
-              id:'mapbox/mapbox-traffic-v1',
-              accessToken:'pk.eyJ1IjoiY2V6MTYiLCJhIjoiY2w4eGNtdWFkMDVldDNvcGNuOTk0a3ZjeiJ9.u4DpCO8MWNsOWtt35ZCCzw'
-
-            }).addTo(mymap);
-
-            // L.tileLayer(
-            // 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-            // id: 'mapbox/dark-v10',
-            // accessToken: mapbox_access_token,
+            // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token = {accessToken}',
+            // {
+            //   maxZoom: 18,
+            //   id:'mapbox/mapbox-traffic-v1',
+            //   accessToken:'pk.eyJ1IjoiY2V6MTYiLCJhIjoiY2w4eGNtdWFkMDVldDNvcGNuOTk0a3ZjeiJ9.u4DpCO8MWNsOWtt35ZCCzw'
+            //
             // }).addTo(mymap);
+
+            L.tileLayer(
+            'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+            id: 'mapbox/navigation-day-v1',
+            accessToken: mapbox_access_token,
+            }).addTo(mymap);
 
                var marker = L.marker([51.5, -0.09]).addTo(mymap);
                  marker.bindPopup("<b>Hello world!</b><br>I am a pop-up.").openPopup();
@@ -113,6 +116,11 @@
               {
                 mymap.setView(e.latlng, 13);
               })
+              var polyline = L.polyline([
+                      [51.506, -0.08],
+                      [51.502, -0.06],
+                      [51.507, -0.047],
+                    ]).addTo(mymap)
               var ZoomViewer = L.Control.extend({onAdd: function()
                 {
                   var gauge = L.DomUtil.create('div');
@@ -128,6 +136,7 @@
             });
             (new ZoomViewer).addTo(mymap);
             mymap.setView([0,0], 1);
+
           </script>
         </div>
 </body>
