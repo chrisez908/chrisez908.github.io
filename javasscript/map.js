@@ -1,6 +1,6 @@
 
   //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-  var mymap = L.map('map.js');
+  var mymap = L.map('mapid');
   // var options = {
   //   key: 'cb6194a881934bf5a6cdf9adc347c879',
   //   limit: 10
