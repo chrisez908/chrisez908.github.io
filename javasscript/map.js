@@ -9,7 +9,7 @@ var myIcon = L.icon({
     iconAnchor: [27.17, 78.04],
     popupAnchor: [27.17, 78.04]})
 
-var Taj = L.marker([27.17, 78.04]).addTo(mymap);
+var Taj = L.marker([27.17, 78.04],{icon: myIcon}).addTo(mymap);
   marker.bindPopup("India's Taj Mahal").openPopup();
   marker.on('click', function(e)
   {
