@@ -1,6 +1,6 @@
 // var mymap = L.map('mapid').setView([51.505, -0.09], 13);
-var mymap = L.map('mapid');
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+L.tileLayer('https://cartodb-basemaps-
+{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
 }).addTo(mymap);
 
 var Taj = L.marker([27.17, 78.04]).addTo(mymap);
