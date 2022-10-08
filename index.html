@@ -74,34 +74,16 @@
       <h3>Geocoding Map</h3>
         <div id= "mapid" style="width: 600px; height: 400px; margin: auto;">
           <script src= "javvascript/map.js"></script>
-          <script>  //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+          <!-- <script>
+            var mymap = L.map('mapid').setView([51.505, -0.09], 13);
             var mymap = L.map('mapid');
-            // var options = {
-            //   key: 'cb6194a881934bf5a6cdf9adc347c879',
-            //   limit: 10
-            // };
-            // var geosearchControl =
-            // L.Control.openCageGeosearch(options).addTo(mymap);
+
             L.tileLayer(
             'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
             id: 'mapbox/navigation-day-v1',
             accessToken: mapbox_access_token,
             }).addTo(mymap);
 
-
-
-            // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png?access_token = {accessToken}',
-            // {
-            //   maxZoom: 18,
-            //   id:'mapbox/mapbox-traffic-v1',
-            //   accessToken:'pk.eyJ1IjoiY2V6MTYiLCJhIjoiY2w4eGNtdWFkMDVldDNvcGNuOTk0a3ZjeiJ9.u4DpCO8MWNsOWtt35ZCCzw'
-            //
-            // }).addTo(mymap);
-
-
-
-            // L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png',
-            //  {}).addTo(mymap);
                var marker = L.marker([27.17, 78.04]).addTo(mymap);
                  marker.bindPopup("Taj Mahal").openPopup();
                  marker.on('click', function(e)
@@ -187,7 +169,7 @@
             });
             (new ZoomViewer).addTo(mymap);
             mymap.setView([0,0], 1);
-</script>
+</script> -->
         </div>
 </body>
 <div id="copyright">
