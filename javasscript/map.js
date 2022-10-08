@@ -3,13 +3,13 @@ var mymap = L.map('mapid');
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(mymap);
 
-var myIcon = L.icon({
-    iconUrl: 'blackmarker.jpg',
-    iconSize: [38, 95],
-    iconAnchor: [27.17, 78.04],
-    popupAnchor: [27.17, 78.04]})
+// var myIcon = L.icon({
+//     iconUrl: 'blackmarker.jpg',
+//     iconSize: [38, 95],
+//     iconAnchor: [27.17, 78.04],
+//     popupAnchor: [27.17, 78.04]})
 
-var Taj = L.marker([27.17, 78.04],{icon: myIcon}).addTo(mymap);
+var Taj = L.marker([27.17, 78.04]).addTo(mymap);
   marker.bindPopup("India's Taj Mahal").openPopup();
   marker.on('click', function(e)
   {
