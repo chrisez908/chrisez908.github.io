@@ -11,43 +11,43 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 var Taj = L.marker([27.17, 78.04]).addTo(mymap);
   marker.bindPopup("India's Taj Mahal").openPopup();
-  marker.on('click', function(e)
+  marker.on('click', function(e);
   {
     mymap.setView(e.latlng, 14);
   })
   var Great_Wall = L.marker([40.33, 116.48]).addTo(mymap);
     marker.bindPopup("Great Wall China").openPopup();
-    marker.on('click', function(e)
+    marker.on('click', function(e);
     {
       mymap.setView(e.latlng, 14);
     })
     var Petra_In_Jordan = L.marker([30.32, 35.44]).addTo(mymap);
        marker.bindPopup("Petra in Jordan").openPopup();
-       marker.on('click', function(e)
+       marker.on('click', function(e);
        {
          mymap.setView(e.latlng, 14);
        })
         var BrazilChrist = L.marker([-22.95, -43.21]).addTo(mymap);
           marker.bindPopup("Brazil's Statue of Christ the Redeemer").openPopup();
-          marker.on('click', function(e)
+          marker.on('click', function(e);
           {
             mymap.setView(e.latlng, 14);
           })
           var MacchuPichu = L.marker([-13.16, -72.55]).addTo(mymap);
             marker.bindPopup("Peru's Macchu Picchu").openPopup();
-            marker.on('click', function(e)
+            marker.on('click', function(e);
             {
               mymap.setView(e.latlng, 14);
             })
             var ChichenItza = L.marker([20.68, -88.57]).addTo(mymap);
               marker.bindPopup("Chichen Itza Pyramid").openPopup();
-              marker.on('click', function(e)
+              marker.on('click', function(e);
               {
                 mymap.setView(e.latlng, 14);
               })
               var Colosseum = L.marker([41.89, 12.49]).addTo(mymap);
                 marker.bindPopup("The Colosseum in Rome").openPopup();
-                marker.on('click', function(e)
+                marker.on('click', function(e);
                 {
                   mymap.setView(e.latlng, 14);
                 })
